@@ -5,7 +5,6 @@ services:
     image: chargepoint-mqtt
     restart: unless-stopped
     environment:
-      # Set these in docker-compose.override.yml or via environment
       STATIONS: ""
       MQTT_HOST: ""
       MQTT_PORT: "1883"
