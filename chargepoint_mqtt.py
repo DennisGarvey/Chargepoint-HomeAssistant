@@ -21,9 +21,9 @@ def format_mqtt_autodiscovery(device_data, mqtt_prefix="homeassistant"):
 	}
 	# Abbreviated origin info
 	origin = {
-		"name": "chargepoint_mqtt_http",
+		"name": "Chargepoint MQTT Bridge",
 		"sw": "1.0",
-		"url": f"https://driver.chargepoint.com/stations/{device_id}"
+		"url": f"https://github.com/DennisGarvey/Chargepoint-HomeAssistant"
 	}
 	sensors = []
 	# Compose binary sensors under 'cmps' for device discovery
