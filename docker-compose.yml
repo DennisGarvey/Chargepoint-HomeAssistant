@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  chargepoint:
+    build: .
+    image: chargepoint-mqtt
+    restart: unless-stopped
+    environment:
+      # Set these in docker-compose.override.yml or via environment
+      STATIONS: ""
+      MQTT_HOST: ""
+      MQTT_PORT: "1883"
+      MQTT_USER: ""
+      MQTT_PASS: ""
+      MQTT_PREFIX: "homeassistant"
+      INTERVAL: "60"
+      ONCE: "0"
