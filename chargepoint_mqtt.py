@@ -135,7 +135,7 @@ if __name__ == "__main__":
 						availability = f"offline ({status})"
 					else:
 						availability = f"offline ({status})"
-					logging.info(f"  Port {outlet}: {availability}")
+					logging.info(f"  Port {outlet}: {status}")
 				# Publish binary sensor configs
 				for sensor in sensors:
 					client.publish(sensor["topic"], sensor["payload"], retain=True)
