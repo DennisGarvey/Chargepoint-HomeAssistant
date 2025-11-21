@@ -110,7 +110,8 @@ if __name__ == "__main__":
 	import time
 	logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s %(message)s')
 	args = parse_args()
-	client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
+	#client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
+	client = mqtt.Client()
 	if args.mqtt_user and args.mqtt_pass:
 		client.username_pw_set(args.mqtt_user, args.mqtt_pass)
 	client.connect(args.mqtt_host, args.mqtt_port, 60)
